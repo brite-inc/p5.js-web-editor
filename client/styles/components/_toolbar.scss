@@ -57,6 +57,10 @@
 	}
 }
 
+.toolbar__learning-component {
+	margin-left: auto;
+}
+
 .toolbar__preferences-button {
 	@include themify() {
 		@extend %toolbar-button;
@@ -68,7 +72,6 @@
 			@extend %toolbar-button--selected;
 		}
 	}
-	margin-left: auto;
 	& span {
 		padding-left: #{1 / $base-font-size}rem;
 		display: flex;
