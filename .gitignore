@@ -2,6 +2,7 @@
 .env
 .env.production
 .env.staging
+.idea/
 .vscode/
 node_modules/
 npm-debug.log
