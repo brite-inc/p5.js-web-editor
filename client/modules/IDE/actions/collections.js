@@ -12,7 +12,7 @@ export function getCollections(username) {
     dispatch(startLoader());
     let url;
     if (username) {
-      url = `/${username}/collections`;
+      url = `/user/${username}/collections`;
     } else {
       url = '/collections';
     }

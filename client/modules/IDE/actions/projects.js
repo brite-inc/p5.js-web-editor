@@ -8,7 +8,7 @@ export function getProjects(username) {
     dispatch(startLoader());
     let url;
     if (username) {
-      url = `/${username}/projects`;
+      url = `/user/${username}/projects`;
     } else {
       url = '/projects';
     }

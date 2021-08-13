@@ -55,7 +55,7 @@ export function getProject(id, username) {
   return (dispatch, getState) => {
     dispatch(justOpenedProject());
     return apiClient
-      .get(`/${username}/projects/${id}`)
+      .get(`/user/${username}/projects/${id}`)
       .then((response) => {
         dispatch(setProject(response.data));
         dispatch(setUnsavedChanges(false));
