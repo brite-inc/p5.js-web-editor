@@ -104,7 +104,10 @@ export function getUser() {
       .then((response) => {
         dispatch({
           type: ActionTypes.AUTH_USER,
-          user: response.data
+          user: {
+            ...response.data,
+            username: response.data.id
+          }
         });
         dispatch({
           type: ActionTypes.SET_PREFERENCES,
