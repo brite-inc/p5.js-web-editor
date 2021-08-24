@@ -13,7 +13,7 @@
     "build:server": "cross-env NODE_ENV=production webpack --config webpack/config.server.js",
     "build:examples": "cross-env NODE_ENV=production webpack --config webpack/config.examples.js",
     "build:client:standalone": "cross-env NODE_ENV=production webpack --config webpack/config.prod.standalone.js",
-    "build:client:standalone:development": "client/modules/User/actions.js b/client/modules/User/actions.js",
+    "build:client:standalone:development": "cross-env NODE_ENV=development webpack --config webpack/config.dev.standalone.js",
     "test": "jest",
     "test:ci": "npm run lint && npm run test",
     "fetch-examples": "cross-env NODE_ENV=development node ./server/scripts/fetch-examples.js",
