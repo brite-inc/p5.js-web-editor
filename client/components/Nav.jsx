@@ -294,7 +294,7 @@ class Nav extends React.PureComponent {
             />
           </button>
           <ul className="nav__dropdown">
-            <li className="nav__dropdown-item">
+            <li className="nav__dropdown-item nav__dropdown-item__hidden">
               <button
                 onClick={this.handleNew}
                 onFocus={this.handleFocusForFile}
@@ -319,7 +319,7 @@ class Nav extends React.PureComponent {
                 </li>
               )}
             {this.props.project.id && this.props.user.authenticated && (
-              <li className="nav__dropdown-item">
+              <li className="nav__dropdown-item nav__dropdown-item__hidden">
                 <button
                   onClick={this.handleDuplicate}
                   onFocus={this.handleFocusForFile}
@@ -330,7 +330,7 @@ class Nav extends React.PureComponent {
               </li>
             )}
             {this.props.project.id && (
-              <li className="nav__dropdown-item">
+              <li className="nav__dropdown-item nav__dropdown-item__hidden">
                 <button
                   onClick={this.handleShare}
                   onFocus={this.handleFocusForFile}
@@ -352,7 +352,7 @@ class Nav extends React.PureComponent {
               </li>
             )}
             {this.props.user.authenticated && (
-              <li className="nav__dropdown-item">
+              <li className="nav__dropdown-item nav__dropdown-item__hidden">
                 <Link
                   to={`/${this.props.user.username}/sketches`}
                   onFocus={this.handleFocusForFile}
@@ -366,7 +366,7 @@ class Nav extends React.PureComponent {
             {getConfig('UI_COLLECTIONS_ENABLED') &&
               this.props.user.authenticated &&
               this.props.project.id && (
-                <li className="nav__dropdown-item">
+                <li className="nav__dropdown-item nav__dropdown-item__hidden">
                   <Link
                     to={`/${this.props.user.username}/sketches/${this.props.project.id}/add-to-collection`}
                     onFocus={this.handleFocusForFile}

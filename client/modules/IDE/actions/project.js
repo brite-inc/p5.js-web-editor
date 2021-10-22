@@ -57,11 +57,13 @@ export function getProject(id, username) {
     return apiClient
       .get(`/user/${username}/projects/${id}`)
       .then((response) => {
+        console.log('getProject.success: ', { response });
         dispatch(setProject(response.data));
         dispatch(setUnsavedChanges(false));
       })
       .catch((error) => {
         const { response } = error;
+        console.log('getProject.failure: ', { error, response });
         dispatch({
           type: ActionTypes.ERROR,
           error: response.data

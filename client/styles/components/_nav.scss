@@ -23,6 +23,10 @@
   align-items: center;
 }
 
+.nav__items-right {
+  display: none;
+}
+
 .preview-nav__editor-svg {
   @include icon();
 }
@@ -150,6 +154,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  &__hidden {
+    display: none !important;
   }
 }
 
