@@ -12,7 +12,11 @@ module.exports = {
   devtool: 'source-map',
   target: 'web',
   entry: {
-    p5: './client-standalone.js'
+    p5: './client-standalone.js',
+    previewScripts: [
+      '@babel/polyfill',
+      path.resolve(__dirname, '../client/utils/previewEntry.js')
+    ]
   },
   output: {
     libraryTarget: 'umd',
