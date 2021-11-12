@@ -1,6 +1,6 @@
 {
   "name": "@brite-inc/p5.js-web-editor-component",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "The P5.js web editor as a component.",
   "scripts": {
     "clean": "rimraf dist",
